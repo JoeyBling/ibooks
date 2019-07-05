@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>移动Web开发技巧汇总 | 試毅-思伟_技术笔记</title>
+    <meta name="description" content=".gitignore-忽略不想上传到&#96;git&#96;上的文件">
+    <link rel="icon" href="/ibooks/favicon.ico">
+  <link rel="manifest" href="/ibooks/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/ibooks/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/ibooks/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/ibooks/assets/css/0.styles.577647a6.css" as="style"><link rel="preload" href="/ibooks/assets/js/app.ed29e1e9.js" as="script"><link rel="preload" href="/ibooks/assets/js/2.b9de35d6.js" as="script"><link rel="preload" href="/ibooks/assets/js/82.cee6a9ac.js" as="script"><link rel="prefetch" href="/ibooks/assets/js/10.076aa46b.js"><link rel="prefetch" href="/ibooks/assets/js/11.f4a5be77.js"><link rel="prefetch" href="/ibooks/assets/js/12.1912a703.js"><link rel="prefetch" href="/ibooks/assets/js/13.13964f42.js"><link rel="prefetch" href="/ibooks/assets/js/14.ae2e887d.js"><link rel="prefetch" href="/ibooks/assets/js/15.763d7561.js"><link rel="prefetch" href="/ibooks/assets/js/16.2cbb4546.js"><link rel="prefetch" href="/ibooks/assets/js/17.7e8b86c7.js"><link rel="prefetch" href="/ibooks/assets/js/18.17e2c35d.js"><link rel="prefetch" href="/ibooks/assets/js/19.23cfc42d.js"><link rel="prefetch" href="/ibooks/assets/js/20.73626428.js"><link rel="prefetch" href="/ibooks/assets/js/21.3d4e072a.js"><link rel="prefetch" href="/ibooks/assets/js/22.dfc3c31e.js"><link rel="prefetch" href="/ibooks/assets/js/23.fd587177.js"><link rel="prefetch" href="/ibooks/assets/js/24.9f2bc16b.js"><link rel="prefetch" href="/ibooks/assets/js/25.b7ab4786.js"><link rel="prefetch" href="/ibooks/assets/js/26.fe0d8df9.js"><link rel="prefetch" href="/ibooks/assets/js/27.23a05001.js"><link rel="prefetch" href="/ibooks/assets/js/28.dd7f748c.js"><link rel="prefetch" href="/ibooks/assets/js/29.d8776f21.js"><link rel="prefetch" href="/ibooks/assets/js/3.553c93a3.js"><link rel="prefetch" href="/ibooks/assets/js/30.48104519.js"><link rel="prefetch" href="/ibooks/assets/js/31.4fd1441e.js"><link rel="prefetch" href="/ibooks/assets/js/32.a0ab3c37.js"><link rel="prefetch" href="/ibooks/assets/js/33.4222e7ae.js"><link rel="prefetch" href="/ibooks/assets/js/34.21cf695f.js"><link rel="prefetch" href="/ibooks/assets/js/35.6c714e92.js"><link rel="prefetch" href="/ibooks/assets/js/36.012d3ba1.js"><link rel="prefetch" href="/ibooks/assets/js/37.d2a3ab96.js"><link rel="prefetch" href="/ibooks/assets/js/38.9e9869f3.js"><link rel="prefetch" href="/ibooks/assets/js/39.b7034c1e.js"><link rel="prefetch" href="/ibooks/assets/js/4.1c1d94c3.js"><link rel="prefetch" href="/ibooks/assets/js/40.38f4c5ff.js"><link rel="prefetch" href="/ibooks/assets/js/41.c453e12e.js"><link rel="prefetch" href="/ibooks/assets/js/42.6dc8bb55.js"><link rel="prefetch" href="/ibooks/assets/js/43.ff750903.js"><link rel="prefetch" href="/ibooks/assets/js/44.9b0c16ac.js"><link rel="prefetch" href="/ibooks/assets/js/45.e45ab46c.js"><link rel="prefetch" href="/ibooks/assets/js/46.bc060a5b.js"><link rel="prefetch" href="/ibooks/assets/js/47.36077d1d.js"><link rel="prefetch" href="/ibooks/assets/js/48.56c7ae33.js"><link rel="prefetch" href="/ibooks/assets/js/49.4cb17eea.js"><link rel="prefetch" href="/ibooks/assets/js/5.3b9284ac.js"><link rel="prefetch" href="/ibooks/assets/js/50.3dac73f7.js"><link rel="prefetch" href="/ibooks/assets/js/51.2c63262c.js"><link rel="prefetch" href="/ibooks/assets/js/52.1337f4ea.js"><link rel="prefetch" href="/ibooks/assets/js/53.0c3aa4e6.js"><link rel="prefetch" href="/ibooks/assets/js/54.a9cd05fe.js"><link rel="prefetch" href="/ibooks/assets/js/55.a61a2490.js"><link rel="prefetch" href="/ibooks/assets/js/56.2e1a04f6.js"><link rel="prefetch" href="/ibooks/assets/js/57.07625085.js"><link rel="prefetch" href="/ibooks/assets/js/58.2795e424.js"><link rel="prefetch" href="/ibooks/assets/js/59.6f92e08f.js"><link rel="prefetch" href="/ibooks/assets/js/6.5560df0d.js"><link rel="prefetch" href="/ibooks/assets/js/60.43bfb3f9.js"><link rel="prefetch" href="/ibooks/assets/js/61.35becefc.js"><link rel="prefetch" href="/ibooks/assets/js/62.fdec88f3.js"><link rel="prefetch" href="/ibooks/assets/js/63.63355b8d.js"><link rel="prefetch" href="/ibooks/assets/js/64.dac024d0.js"><link rel="prefetch" href="/ibooks/assets/js/65.7084110c.js"><link rel="prefetch" href="/ibooks/assets/js/66.c0264ce0.js"><link rel="prefetch" href="/ibooks/assets/js/67.03f5984f.js"><link rel="prefetch" href="/ibooks/assets/js/68.91c72874.js"><link rel="prefetch" href="/ibooks/assets/js/69.fea9c356.js"><link rel="prefetch" href="/ibooks/assets/js/7.1b3211ec.js"><link rel="prefetch" href="/ibooks/assets/js/70.13566828.js"><link rel="prefetch" href="/ibooks/assets/js/71.2b6b9c33.js"><link rel="prefetch" href="/ibooks/assets/js/72.1f35af5f.js"><link rel="prefetch" href="/ibooks/assets/js/73.ee1ebcbe.js"><link rel="prefetch" href="/ibooks/assets/js/74.1bc6a8fe.js"><link rel="prefetch" href="/ibooks/assets/js/75.0c8de7e1.js"><link rel="prefetch" href="/ibooks/assets/js/76.8c3c6691.js"><link rel="prefetch" href="/ibooks/assets/js/77.8fb9ca5e.js"><link rel="prefetch" href="/ibooks/assets/js/78.186d4199.js"><link rel="prefetch" href="/ibooks/assets/js/79.dd08a1d1.js"><link rel="prefetch" href="/ibooks/assets/js/8.ac1c803d.js"><link rel="prefetch" href="/ibooks/assets/js/80.f73b9c66.js"><link rel="prefetch" href="/ibooks/assets/js/81.72ffe549.js"><link rel="prefetch" href="/ibooks/assets/js/83.3836fe03.js"><link rel="prefetch" href="/ibooks/assets/js/84.8e3d93cf.js"><link rel="prefetch" href="/ibooks/assets/js/85.ead50c84.js"><link rel="prefetch" href="/ibooks/assets/js/86.c8098ba8.js"><link rel="prefetch" href="/ibooks/assets/js/87.2272aadf.js"><link rel="prefetch" href="/ibooks/assets/js/88.6300be24.js"><link rel="prefetch" href="/ibooks/assets/js/89.98c673a9.js"><link rel="prefetch" href="/ibooks/assets/js/9.956159db.js"><link rel="prefetch" href="/ibooks/assets/js/90.b0e798aa.js">
+    <link rel="stylesheet" href="/ibooks/assets/css/0.styles.577647a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ibooks/" class="home-link router-link-active"><!----> <span class="site-name">試毅-思伟_技术笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ibooks/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/opensource/springboot_mybatisplus.html" class="nav-link">SpringBoot集成MyBatisPlus</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/bootplus.html" class="nav-link">基于SpringBoot + Shiro + MyBatisPlus的权限管理框架</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/fastjson-spring-boot-starter.html" class="nav-link">自制spring boot starter for fastjson</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/anires.html" class="nav-link">一个会动的简历</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/java/springboot2.html" class="nav-link">Java笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/web/" class="nav-link router-link-active">前端开发笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/hexo/hexo_music.html" class="nav-link">Hexo博客</a></li><li class="dropdown-item"><!----> <a href="/ibooks/notes/git_branch.html" class="nav-link">日记本</a></li><li class="dropdown-item"><!----> <a href="/ibooks/linux/glibc.html" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/ibooks/elk/linux_es5.html" class="nav-link">ELK日志分析</a></li></ul></div></div><div class="nav-item"><a href="/ibooks/about/" class="nav-link">关于我</a></div><div class="nav-item"><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/JoeyBling/ibooks" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ibooks/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/opensource/springboot_mybatisplus.html" class="nav-link">SpringBoot集成MyBatisPlus</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/bootplus.html" class="nav-link">基于SpringBoot + Shiro + MyBatisPlus的权限管理框架</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/fastjson-spring-boot-starter.html" class="nav-link">自制spring boot starter for fastjson</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/anires.html" class="nav-link">一个会动的简历</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/java/springboot2.html" class="nav-link">Java笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/web/" class="nav-link router-link-active">前端开发笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/hexo/hexo_music.html" class="nav-link">Hexo博客</a></li><li class="dropdown-item"><!----> <a href="/ibooks/notes/git_branch.html" class="nav-link">日记本</a></li><li class="dropdown-item"><!----> <a href="/ibooks/linux/glibc.html" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/ibooks/elk/linux_es5.html" class="nav-link">ELK日志分析</a></li></ul></div></div><div class="nav-item"><a href="/ibooks/about/" class="nav-link">关于我</a></div><div class="nav-item"><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/JoeyBling/ibooks" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端开发笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ibooks/web/" class="sidebar-link">前端开发笔记</a></li><li><a href="/ibooks/web/collect.html" class="sidebar-link">移动Web开发技巧汇总</a></li><li><a href="/ibooks/web/notice.html" class="sidebar-link">前端开发注意事项</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>nodejs项目配置文件介绍</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ibooks/web/node/nodejs.html" class="sidebar-link">nodejs项目配置文件介绍</a></li><li><a href="/ibooks/web/node/gulpfilejs.html" class="sidebar-link">gulpfilejs</a></li><li><a href="/ibooks/web/node/packagejson.html" class="sidebar-link">package.json</a></li><li><a href="/ibooks/web/node/configrb.html" class="sidebar-link">config.rb</a></li><li><a href="/ibooks/web/node/gitignore.html" class="active sidebar-link">移动Web开发技巧汇总</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>模块化管理工具及框架</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常见js模块</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常用插件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="移动web开发技巧汇总"><a href="#移动web开发技巧汇总" aria-hidden="true" class="header-anchor">#</a> 移动Web开发技巧汇总</h1> <h1 id="gitignore"><a href="#gitignore" aria-hidden="true" class="header-anchor">#</a> .gitignore</h1> <h6 id="这个文件是设置忽略不想上传到git上的文件"><a href="#这个文件是设置忽略不想上传到git上的文件" aria-hidden="true" class="header-anchor">#</a> 这个文件是设置忽略不想上传到<code>git</code>上的文件</h6> <h6 id="把不想上传的文件名称直接写进这个文件内就可以"><a href="#把不想上传的文件名称直接写进这个文件内就可以" aria-hidden="true" class="header-anchor">#</a> 把不想上传的文件名称直接写进这个文件内就可以</h6> <blockquote><p>示例：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code># Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Typescript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+_book
+.DS_Store
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/ibooks/web/node/configrb.html" class="prev">
+          config.rb
+        </a></span> <span class="next"><a href="/ibooks/web/frame/">
+          模块化管理工具及框架
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/ibooks/assets/js/app.ed29e1e9.js" defer></script><script src="/ibooks/assets/js/2.b9de35d6.js" defer></script><script src="/ibooks/assets/js/82.cee6a9ac.js" defer></script>
+  </body>
+</html>

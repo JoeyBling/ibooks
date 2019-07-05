@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SpringBoot集成Druid不支持多条SQL | 試毅-思伟_技术笔记</title>
+    <meta name="description" content="SpringBoot集成Druid不支持多条SQL">
+    <link rel="icon" href="/ibooks/favicon.ico">
+  <link rel="manifest" href="/ibooks/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/ibooks/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/ibooks/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/ibooks/assets/css/0.styles.577647a6.css" as="style"><link rel="preload" href="/ibooks/assets/js/app.ed29e1e9.js" as="script"><link rel="preload" href="/ibooks/assets/js/2.b9de35d6.js" as="script"><link rel="preload" href="/ibooks/assets/js/49.4cb17eea.js" as="script"><link rel="prefetch" href="/ibooks/assets/js/10.076aa46b.js"><link rel="prefetch" href="/ibooks/assets/js/11.f4a5be77.js"><link rel="prefetch" href="/ibooks/assets/js/12.1912a703.js"><link rel="prefetch" href="/ibooks/assets/js/13.13964f42.js"><link rel="prefetch" href="/ibooks/assets/js/14.ae2e887d.js"><link rel="prefetch" href="/ibooks/assets/js/15.763d7561.js"><link rel="prefetch" href="/ibooks/assets/js/16.2cbb4546.js"><link rel="prefetch" href="/ibooks/assets/js/17.7e8b86c7.js"><link rel="prefetch" href="/ibooks/assets/js/18.17e2c35d.js"><link rel="prefetch" href="/ibooks/assets/js/19.23cfc42d.js"><link rel="prefetch" href="/ibooks/assets/js/20.73626428.js"><link rel="prefetch" href="/ibooks/assets/js/21.3d4e072a.js"><link rel="prefetch" href="/ibooks/assets/js/22.dfc3c31e.js"><link rel="prefetch" href="/ibooks/assets/js/23.fd587177.js"><link rel="prefetch" href="/ibooks/assets/js/24.9f2bc16b.js"><link rel="prefetch" href="/ibooks/assets/js/25.b7ab4786.js"><link rel="prefetch" href="/ibooks/assets/js/26.fe0d8df9.js"><link rel="prefetch" href="/ibooks/assets/js/27.23a05001.js"><link rel="prefetch" href="/ibooks/assets/js/28.dd7f748c.js"><link rel="prefetch" href="/ibooks/assets/js/29.d8776f21.js"><link rel="prefetch" href="/ibooks/assets/js/3.553c93a3.js"><link rel="prefetch" href="/ibooks/assets/js/30.48104519.js"><link rel="prefetch" href="/ibooks/assets/js/31.4fd1441e.js"><link rel="prefetch" href="/ibooks/assets/js/32.a0ab3c37.js"><link rel="prefetch" href="/ibooks/assets/js/33.4222e7ae.js"><link rel="prefetch" href="/ibooks/assets/js/34.21cf695f.js"><link rel="prefetch" href="/ibooks/assets/js/35.6c714e92.js"><link rel="prefetch" href="/ibooks/assets/js/36.012d3ba1.js"><link rel="prefetch" href="/ibooks/assets/js/37.d2a3ab96.js"><link rel="prefetch" href="/ibooks/assets/js/38.9e9869f3.js"><link rel="prefetch" href="/ibooks/assets/js/39.b7034c1e.js"><link rel="prefetch" href="/ibooks/assets/js/4.1c1d94c3.js"><link rel="prefetch" href="/ibooks/assets/js/40.38f4c5ff.js"><link rel="prefetch" href="/ibooks/assets/js/41.c453e12e.js"><link rel="prefetch" href="/ibooks/assets/js/42.6dc8bb55.js"><link rel="prefetch" href="/ibooks/assets/js/43.ff750903.js"><link rel="prefetch" href="/ibooks/assets/js/44.9b0c16ac.js"><link rel="prefetch" href="/ibooks/assets/js/45.e45ab46c.js"><link rel="prefetch" href="/ibooks/assets/js/46.bc060a5b.js"><link rel="prefetch" href="/ibooks/assets/js/47.36077d1d.js"><link rel="prefetch" href="/ibooks/assets/js/48.56c7ae33.js"><link rel="prefetch" href="/ibooks/assets/js/5.3b9284ac.js"><link rel="prefetch" href="/ibooks/assets/js/50.3dac73f7.js"><link rel="prefetch" href="/ibooks/assets/js/51.2c63262c.js"><link rel="prefetch" href="/ibooks/assets/js/52.1337f4ea.js"><link rel="prefetch" href="/ibooks/assets/js/53.0c3aa4e6.js"><link rel="prefetch" href="/ibooks/assets/js/54.a9cd05fe.js"><link rel="prefetch" href="/ibooks/assets/js/55.a61a2490.js"><link rel="prefetch" href="/ibooks/assets/js/56.2e1a04f6.js"><link rel="prefetch" href="/ibooks/assets/js/57.07625085.js"><link rel="prefetch" href="/ibooks/assets/js/58.2795e424.js"><link rel="prefetch" href="/ibooks/assets/js/59.6f92e08f.js"><link rel="prefetch" href="/ibooks/assets/js/6.5560df0d.js"><link rel="prefetch" href="/ibooks/assets/js/60.43bfb3f9.js"><link rel="prefetch" href="/ibooks/assets/js/61.35becefc.js"><link rel="prefetch" href="/ibooks/assets/js/62.fdec88f3.js"><link rel="prefetch" href="/ibooks/assets/js/63.63355b8d.js"><link rel="prefetch" href="/ibooks/assets/js/64.dac024d0.js"><link rel="prefetch" href="/ibooks/assets/js/65.7084110c.js"><link rel="prefetch" href="/ibooks/assets/js/66.c0264ce0.js"><link rel="prefetch" href="/ibooks/assets/js/67.03f5984f.js"><link rel="prefetch" href="/ibooks/assets/js/68.91c72874.js"><link rel="prefetch" href="/ibooks/assets/js/69.fea9c356.js"><link rel="prefetch" href="/ibooks/assets/js/7.1b3211ec.js"><link rel="prefetch" href="/ibooks/assets/js/70.13566828.js"><link rel="prefetch" href="/ibooks/assets/js/71.2b6b9c33.js"><link rel="prefetch" href="/ibooks/assets/js/72.1f35af5f.js"><link rel="prefetch" href="/ibooks/assets/js/73.ee1ebcbe.js"><link rel="prefetch" href="/ibooks/assets/js/74.1bc6a8fe.js"><link rel="prefetch" href="/ibooks/assets/js/75.0c8de7e1.js"><link rel="prefetch" href="/ibooks/assets/js/76.8c3c6691.js"><link rel="prefetch" href="/ibooks/assets/js/77.8fb9ca5e.js"><link rel="prefetch" href="/ibooks/assets/js/78.186d4199.js"><link rel="prefetch" href="/ibooks/assets/js/79.dd08a1d1.js"><link rel="prefetch" href="/ibooks/assets/js/8.ac1c803d.js"><link rel="prefetch" href="/ibooks/assets/js/80.f73b9c66.js"><link rel="prefetch" href="/ibooks/assets/js/81.72ffe549.js"><link rel="prefetch" href="/ibooks/assets/js/82.cee6a9ac.js"><link rel="prefetch" href="/ibooks/assets/js/83.3836fe03.js"><link rel="prefetch" href="/ibooks/assets/js/84.8e3d93cf.js"><link rel="prefetch" href="/ibooks/assets/js/85.ead50c84.js"><link rel="prefetch" href="/ibooks/assets/js/86.c8098ba8.js"><link rel="prefetch" href="/ibooks/assets/js/87.2272aadf.js"><link rel="prefetch" href="/ibooks/assets/js/88.6300be24.js"><link rel="prefetch" href="/ibooks/assets/js/89.98c673a9.js"><link rel="prefetch" href="/ibooks/assets/js/9.956159db.js"><link rel="prefetch" href="/ibooks/assets/js/90.b0e798aa.js">
+    <link rel="stylesheet" href="/ibooks/assets/css/0.styles.577647a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ibooks/" class="home-link router-link-active"><!----> <span class="site-name">試毅-思伟_技术笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ibooks/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/opensource/springboot_mybatisplus.html" class="nav-link">SpringBoot集成MyBatisPlus</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/bootplus.html" class="nav-link">基于SpringBoot + Shiro + MyBatisPlus的权限管理框架</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/fastjson-spring-boot-starter.html" class="nav-link">自制spring boot starter for fastjson</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/anires.html" class="nav-link">一个会动的简历</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/java/springboot2.html" class="nav-link">Java笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/web/" class="nav-link">前端开发笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/hexo/hexo_music.html" class="nav-link">Hexo博客</a></li><li class="dropdown-item"><!----> <a href="/ibooks/notes/git_branch.html" class="nav-link">日记本</a></li><li class="dropdown-item"><!----> <a href="/ibooks/linux/glibc.html" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/ibooks/elk/linux_es5.html" class="nav-link">ELK日志分析</a></li></ul></div></div><div class="nav-item"><a href="/ibooks/about/" class="nav-link">关于我</a></div><div class="nav-item"><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/JoeyBling/ibooks" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ibooks/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/opensource/springboot_mybatisplus.html" class="nav-link">SpringBoot集成MyBatisPlus</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/bootplus.html" class="nav-link">基于SpringBoot + Shiro + MyBatisPlus的权限管理框架</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/fastjson-spring-boot-starter.html" class="nav-link">自制spring boot starter for fastjson</a></li><li class="dropdown-item"><!----> <a href="/ibooks/opensource/anires.html" class="nav-link">一个会动的简历</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ibooks/java/springboot2.html" class="nav-link">Java笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/web/" class="nav-link">前端开发笔记</a></li><li class="dropdown-item"><!----> <a href="/ibooks/hexo/hexo_music.html" class="nav-link">Hexo博客</a></li><li class="dropdown-item"><!----> <a href="/ibooks/notes/git_branch.html" class="nav-link">日记本</a></li><li class="dropdown-item"><!----> <a href="/ibooks/linux/glibc.html" class="nav-link">Linux</a></li><li class="dropdown-item"><!----> <a href="/ibooks/elk/linux_es5.html" class="nav-link">ELK日志分析</a></li></ul></div></div><div class="nav-item"><a href="/ibooks/about/" class="nav-link">关于我</a></div><div class="nav-item"><a href="https://zhousiwei.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/JoeyBling/ibooks" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Java笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ibooks/java/springboot2.html" class="sidebar-link">SpringBoot2.0更新记录</a></li><li><a href="/ibooks/java/springboot_druid.html" class="active sidebar-link">SpringBoot集成Druid不支持多条SQL</a></li><li><a href="/ibooks/java/springboot_index.html" class="sidebar-link">SpringBoot设置默认首页</a></li><li><a href="/ibooks/java/ajax_type.html" class="sidebar-link">Ajax请求设置Type为Form-Data</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="springboot集成druid不支持多条sql"><a href="#springboot集成druid不支持多条sql" aria-hidden="true" class="header-anchor">#</a> SpringBoot集成Druid不支持多条SQL</h1> <p>在<code>DataSource</code>初始化Bean 添加</p> <div class="language- extra-class"><pre class="language-text"><code>List&lt;Filter&gt; proxyFilters = new ArrayList&lt;Filter&gt;();
+WallFilter statFilter = new WallFilter();
+WallConfig config = new WallConfig();
+config.setMultiStatementAllow(true); // 批量操作
+statFilter.setConfig(config);
+proxyFilters.add(statFilter);
+druidDataSource.setProxyFilters(proxyFilters);
+</code></pre></div><p>贴上自己的<code>Config</code></p> <div class="language- extra-class"><pre class="language-text"><code>package com.wstro.config;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.sql.DataSource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.alibaba.druid.filter.Filter;
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.support.http.StatViewServlet;
+import com.alibaba.druid.support.http.WebStatFilter;
+import com.alibaba.druid.wall.WallConfig;
+import com.alibaba.druid.wall.WallFilter;
+
+/**
+ * Druid数据源配置
+ * 
+ * @author Joey
+ * @Email 2434387555@qq.com
+ *
+ */
+@Configuration
+@EnableTransactionManagement // 启注解事务管理
+public class DataSourceConfig {
+	private Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
+
+	@Value(&quot;${spring.datasource.url}&quot;)
+	private String dbUrl;
+
+	@Value(&quot;${spring.datasource.username}&quot;)
+	private String username;
+
+	@Value(&quot;${spring.datasource.password}&quot;)
+	private String password;
+
+	@Value(&quot;${spring.datasource.driverClassName}&quot;)
+	private String driverClassName;
+
+	@Value(&quot;${spring.datasource.initialSize}&quot;)
+	private int initialSize;
+
+	@Value(&quot;${spring.datasource.minIdle}&quot;)
+	private int minIdle;
+
+	@Value(&quot;${spring.datasource.maxActive}&quot;)
+	private int maxActive;
+
+	@Value(&quot;${spring.datasource.maxWait}&quot;)
+	private int maxWait;
+
+	@Value(&quot;${spring.datasource.timeBetweenEvictionRunsMillis}&quot;)
+	private int timeBetweenEvictionRunsMillis;
+
+	@Value(&quot;${spring.datasource.minEvictableIdleTimeMillis}&quot;)
+	private int minEvictableIdleTimeMillis;
+
+	@Value(&quot;${spring.datasource.validationQuery}&quot;)
+	private String validationQuery;
+
+	@Value(&quot;${spring.datasource.testWhileIdle}&quot;)
+	private boolean testWhileIdle;
+
+	@Value(&quot;${spring.datasource.testOnBorrow}&quot;)
+	private boolean testOnBorrow;
+
+	@Value(&quot;${spring.datasource.testOnReturn}&quot;)
+	private boolean testOnReturn;
+
+	@Value(&quot;${spring.datasource.poolPreparedStatements}&quot;)
+	private boolean poolPreparedStatements;
+
+	@Value(&quot;${spring.datasource.maxPoolPreparedStatementPerConnectionSize}&quot;)
+	private int maxPoolPreparedStatementPerConnectionSize;
+
+	@Value(&quot;${spring.datasource.filters}&quot;)
+	private String filters;
+
+	@Value(&quot;${spring.datasource.connectionProperties}&quot;)
+	private String connectionProperties;
+
+	/**
+	 * 注册DruidServlet
+	 * 
+	 * @return ServletRegistrationBean
+	 */
+	@Bean
+	public ServletRegistrationBean druidServletRegistrationBean() {
+		ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();
+		servletRegistrationBean.setServlet(new StatViewServlet());
+		servletRegistrationBean.addUrlMappings(&quot;/druid/*&quot;);
+		// 白名单：
+		servletRegistrationBean.addInitParameter(&quot;allow&quot;, &quot;127.0.0.1&quot;);
+		// IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not
+		// permitted to view this page.
+		// 登录查看信息的账号密码.
+		servletRegistrationBean.addInitParameter(&quot;loginUsername&quot;, &quot;joey&quot;);
+		servletRegistrationBean.addInitParameter(&quot;loginPassword&quot;, &quot;jay&quot;);
+		// 是否能够重置数据.
+		servletRegistrationBean.addInitParameter(&quot;resetEnable&quot;, &quot;false&quot;);
+		return servletRegistrationBean;
+	}
+
+	/**
+	 * 注册DruidFilter拦截
+	 * 
+	 * @return FilterRegistrationBean
+	 */
+	@Bean
+	public FilterRegistrationBean druidFilterRegistrationBean() {
+		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+		filterRegistrationBean.setFilter(new WebStatFilter());
+		Map&lt;String, String&gt; initParams = new HashMap&lt;String, String&gt;();
+		// 设置忽略请求
+		initParams.put(&quot;exclusions&quot;, &quot;*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*&quot;);
+		filterRegistrationBean.setInitParameters(initParams);
+		filterRegistrationBean.addUrlPatterns(&quot;/*&quot;);
+		return filterRegistrationBean;
+	}
+
+	/**
+	 * 配置DataSource
+	 * 
+	 * @return DataSource
+	 * @throws SQLException
+	 */
+	@Bean(initMethod = &quot;init&quot;, destroyMethod = &quot;close&quot;)
+	@Primary
+	public DataSource dataSource() throws SQLException {
+		DruidDataSource druidDataSource = new DruidDataSource();
+		druidDataSource.setUrl(dbUrl);
+		druidDataSource.setUsername(username);
+		druidDataSource.setPassword(password);
+		druidDataSource.setDriverClassName(driverClassName);
+		// configuration
+		druidDataSource.setInitialSize(initialSize);
+		druidDataSource.setMinIdle(minIdle);
+		druidDataSource.setMaxActive(maxActive);
+		druidDataSource.setMaxWait(maxWait);
+		druidDataSource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
+		druidDataSource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
+		druidDataSource.setValidationQuery(validationQuery);
+		druidDataSource.setTestWhileIdle(testWhileIdle);
+		druidDataSource.setTestOnBorrow(testOnBorrow);
+		druidDataSource.setTestOnReturn(testOnReturn);
+		druidDataSource.setPoolPreparedStatements(poolPreparedStatements);
+		druidDataSource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
+		try {
+			List&lt;Filter&gt; proxyFilters = new ArrayList&lt;Filter&gt;();
+			WallFilter statFilter = new WallFilter();
+			WallConfig config = new WallConfig();
+			config.setMultiStatementAllow(true); // 批量操作
+			statFilter.setConfig(config);
+			proxyFilters.add(statFilter);
+			druidDataSource.setProxyFilters(proxyFilters);
+			druidDataSource.setFilters(filters);
+		} catch (SQLException e) {
+			logger.error(&quot;druid configuration initialization filter&quot;, e);
+		}
+		druidDataSource.setConnectionProperties(connectionProperties);
+		return druidDataSource;
+	}
+}
+</code></pre></div><h5 id="properties"><a href="#properties" aria-hidden="true" class="header-anchor">#</a> <code>properties</code></h5> <div class="language- extra-class"><pre class="language-text"><code>#JDBC
+# \u6570\u636E\u5E93\u8BBF\u95EE\u914D\u7F6E
+# \u4E3B\u6570\u636E\u6E90\uFF0C\u9ED8\u8BA4\u7684
+spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+spring.datasource.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://192.168.1.88:3306/wstro?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+spring.datasource.username=root
+spring.datasource.password=root
+
+# \u4E0B\u9762\u4E3A\u8FDE\u63A5\u6C60\u7684\u8865\u5145\u8BBE\u7F6E\uFF0C\u5E94\u7528\u5230\u4E0A\u9762\u6240\u6709\u6570\u636E\u6E90\u4E2D
+# \u521D\u59CB\u5316\u5927\u5C0F\uFF0C\u6700\u5C0F\uFF0C\u6700\u5927
+spring.datasource.initialSize=5
+spring.datasource.minIdle=5
+spring.datasource.maxActive=20
+
+# \u914D\u7F6E\u83B7\u53D6\u8FDE\u63A5\u7B49\u5F85\u8D85\u65F6\u7684\u65F6\u95F4
+spring.datasource.maxWait=60000
+
+# \u914D\u7F6E\u95F4\u9694\u591A\u4E45\u624D\u8FDB\u884C\u4E00\u6B21\u68C0\u6D4B\uFF0C\u68C0\u6D4B\u9700\u8981\u5173\u95ED\u7684\u7A7A\u95F2\u8FDE\u63A5\uFF0C\u5355\u4F4D\u662F\u6BEB\u79D2
+spring.datasource.timeBetweenEvictionRunsMillis=60000
+
+# \u914D\u7F6E\u4E00\u4E2A\u8FDE\u63A5\u5728\u6C60\u4E2D\u6700\u5C0F\u751F\u5B58\u7684\u65F6\u95F4\uFF0C\u5355\u4F4D\u662F\u6BEB\u79D2
+spring.datasource.minEvictableIdleTimeMillis=300000
+spring.datasource.validationQuery=SELECT 1 FROM DUAL
+spring.datasource.testWhileIdle=true
+spring.datasource.testOnBorrow=false
+spring.datasource.testOnReturn=false
+
+# \u6253\u5F00PSCache\uFF0C\u5E76\u4E14\u6307\u5B9A\u6BCF\u4E2A\u8FDE\u63A5\u4E0APSCache\u7684\u5927\u5C0F
+spring.datasource.poolPreparedStatements=true
+spring.datasource.maxPoolPreparedStatementPerConnectionSize=20
+
+# \u914D\u7F6E\u76D1\u63A7\u7EDF\u8BA1\u62E6\u622A\u7684filters\uFF0C\u53BB\u6389\u540E\u76D1\u63A7\u754C\u9762sql\u65E0\u6CD5\u7EDF\u8BA1\uFF0C'wall'\u7528\u4E8E\u9632\u706B\u5899
+spring.datasource.filters=stat,wall,log4j
+
+# \u901A\u8FC7connectProperties\u5C5E\u6027\u6765\u6253\u5F00mergeSql\u529F\u80FD\uFF1B\u6162SQL\u8BB0\u5F55
+spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;druid.stat.logSlowSql=true;
+
+# \u5408\u5E76\u591A\u4E2ADruidDataSource\u7684\u76D1\u63A7\u6570\u636E
+#spring.datasource.useGlobalDataSourceStat=true
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/ibooks/java/springboot2.html" class="prev">
+          SpringBoot2.0更新记录
+        </a></span> <span class="next"><a href="/ibooks/java/springboot_index.html">
+          SpringBoot设置默认首页
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/ibooks/assets/js/app.ed29e1e9.js" defer></script><script src="/ibooks/assets/js/2.b9de35d6.js" defer></script><script src="/ibooks/assets/js/49.4cb17eea.js" defer></script>
+  </body>
+</html>
