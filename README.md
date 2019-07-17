@@ -1,11 +1,26 @@
-# 試毅-思伟的技术笔记
+# [試毅-思伟的技术笔记](http://joeybling.github.io/ibooks)
 
-#### 介绍
+> **欢迎使用和Star支持，如使用过程中碰到问题，可以提出Issue，我会尽力完善**
+
+## 介绍
 Vuepress记录技术开发笔记
+
+**全局安装`VuePress`**
+```bash
+npm install -g vuepress 或者 yarn global add vuepress
+```
+
+## 线上预览
 
 > **预览 ➡️ [http://joeybling.github.io/ibooks](http://joeybling.github.io/ibooks)**
 
-## 安装运行
+## 本地预览
+1. 安装 `node.js/npm`
+
+> 可以参考我的文章 ➡️ [Linux或Win下安装node和npm](https://www.jianshu.com/p/f8b0a4f7a822)
+
+2. 运行
+
 ```bash
 git clone https://github.com/JoeyBling/ibooks.git
 cd ibooks
@@ -28,6 +43,10 @@ git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 --- 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 ```
+
+## 项目截图
+
+[![Vuepress记录技术开发笔记](./screenshots/ibooks_mini.png "Vuepress记录技术开发笔记")](http://joeybling.github.io/ibooks "Vuepress记录技术开发笔记")
 
 **一直在努力,从未放弃**
 
@@ -81,3 +100,7 @@ git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 | 微信 | 支付宝 |
 | :---: | :---: |
 | ![](./images/weixin.png) | ![](./images/alipay.jpeg) |
+
+## License
+
+[Apache License](./LICENSE)
