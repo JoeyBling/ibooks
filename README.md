@@ -15,7 +15,7 @@
 > **欢迎使用和Star支持，如使用过程中碰到问题，可以提出Issue，我会尽力完善**
 
 ## 介绍
-&#160;&#160;&#160;&#160;**`Vuepress`记录技术开发笔记**
+&#160;&#160;&#160;&#160;**`VuePress`记录技术开发笔记**
 
 - **全局安装 `VuePress`**
 ```bash
@@ -40,7 +40,7 @@ cd dist  // 把生成的目标文件`dist/*`放在你的web服务器上
 
 ## 项目截图
 
-[![Vuepress记录技术开发笔记](./examples/screenshots/ibooks_mini.png "Vuepress记录技术开发笔记")](http://zhousiwei.gitee.io/ibooks "Vuepress记录技术开发笔记")
+[![VuePress记录技术开发笔记](./examples/screenshots/ibooks_mini.png "VuePress记录技术开发笔记")](http://zhousiwei.gitee.io/ibooks "VuePress记录技术开发笔记")
 
 ## 其它项目支持
 
