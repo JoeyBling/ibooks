@@ -1,0 +1,5 @@
+# REMARK
+
+## 部署不同URL需要注意的地方
+> `docs/.vuepress/config.js`
+需要更改Gitalk的配置，不同配置授权及回调一样不同

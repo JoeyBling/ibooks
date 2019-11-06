@@ -1,0 +1,39 @@
+language: node_js
+
+node_js:
+  - node
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+# S: Build LifeCycle
+install:
+  - npm install
+
+# before_script:
+
+script:
+  # - npm run eslint # 工程测试
+  - npm run dev # 工程测试
+  - npm run build # 工程构建打包
+
+git:
+  depth: false
+
+branches:
+  only:
+    - master
+
+# before_deploy:
+#   - yarn build
+
+deploy:
+  provider: pages
+  # github-token: $GITHUB_TOKEN
+  # local-dir: ./
+  # skip-cleanup: true
+  # target-branch: master
+  on:
+    branch: master # 当master分支有push事件的时候执行deploy流程

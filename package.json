@@ -1,0 +1,53 @@
+{
+  "name": "ibooks",
+  "version": "1.0.0",
+  "description": "試毅-思伟_技术笔记",
+  "main": "index.js",
+  "private": false,
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitee.com/zhousiwei/ibooks"
+  },
+  "bugs": "https://gitee.com/zhousiwei/ibooks/issues",
+  "homepage": "https://zhousiwei.gitee.io/ibooks",
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint --fix --ext .js,.vue .",
+    "lint": "./node_modules/.bin/eslint src && stylelint 'src/**/*.less' && ./node_modules/.bin/eclint check",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/vuepress dev docs",
+    "serve": "npm run dev",
+    "build": "./node_modules/.bin/vuepress build docs",
+    "pack": "echo \"Error: Please Use npm run build\" && exit 1",
+    "dist": "npm run build"
+  },
+  "keywords": [
+    "試毅-思伟_技术笔记"
+  ],
+  "author": {
+    "name": "周思伟",
+    "email": "2434387555@qq.com",
+    "url": "https://zhousiwei.gitee.io"
+  },
+  "license": "Apache License",
+  "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.1.0",
+    "busuanzi.pure.js": "^1.0.2",
+    "commander": "^2.20.0",
+    "esm": "^3.2.25",
+    "highlight.js": "^9.15.10",
+    "vuepress": "^1.0.0",
+    "vuepress-plugin-gotop-plus": "^1.0.0",
+    "vuepress-plugin-helper-live2d": "^1.0.0",
+    "vuepress-plugin-medium-zoom": "^1.1.2",
+    "vuepress-plugin-mygitalk": "^1.0.4",
+    "vuepress-plugin-sitemap": "^2.1.2",
+    "vuepress-theme-yilia-plus": "^1.0.0"
+  },
+  "devDependencies": {
+    "gitalk": "^1.5.0",
+    "lodash": "^4.17.15"
+  }
+}
