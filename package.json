@@ -37,7 +37,7 @@
     "busuanzi.pure.js": "^1.0.2",
     "commander": "^2.20.0",
     "esm": "^3.2.25",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.1.2",
     "vuepress": "^1.0.0",
     "vuepress-plugin-gotop-plus": "^1.0.0",
     "vuepress-plugin-helper-live2d": "^1.0.0",
